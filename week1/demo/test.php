@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        // I changed something
             phpinfo();
         ?>
     </body>
