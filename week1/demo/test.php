@@ -8,6 +8,7 @@
         <?php
         
         session_start();
+        // I changed something
             phpinfo();
         ?>
     </body>
