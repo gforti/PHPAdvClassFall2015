@@ -8,8 +8,14 @@
         <?php
         // put your code here
         
-        $dob = filter_input(INPUT_POST, 'dob');
+        $dob = filter_input(INPUT_POST, 'dob');        
+        ?>
         
+        
+        <?php 
+        if ( !is_null($dob) ) {
+            echo  date("F j, Y, g:i a",strtotime($dob));             
+        }
         ?>
         
         <form action="#" method="post">            
