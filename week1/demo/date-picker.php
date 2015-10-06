@@ -8,12 +8,12 @@
         <?php
         // put your code here
         
-        $date = filter_input(INPUT_POST, 'dob');
-                
+        $dob = filter_input(INPUT_POST, 'dob');
+        
         ?>
         
         <form action="#" method="post">            
-            Birthday : <input type="date" name="dob" value="<?php echo $date; ?>" />
+            Birthday : <input type="date" name="dob" value="<?php echo $dob; ?>" />
             <input type="submit" value="submit" />
         </form>
     </body>
