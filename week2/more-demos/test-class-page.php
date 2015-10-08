@@ -13,7 +13,7 @@
             
             echo $test->getTest();
             
-            $test->
+            //$test->
         
         ?>
     </body>
