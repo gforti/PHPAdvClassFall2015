@@ -14,11 +14,11 @@ class EmailModel {
     
     private $email;
     
-    function getEmail() {
+    public function getEmail() {
         return $this->email;
     }
 
-    function setEmail($email) {
+    public function setEmail($email) {
         $this->email = $email;
     }
 
