@@ -1,5 +1,5 @@
 <?php 
-namespace week2\gforti;
+namespace week3\gforti;
 
 include './bootstrap.php'; ?>
 <!DOCTYPE html>

@@ -6,7 +6,7 @@
  * @author User
  */
 
-namespace week2\gforti;
+namespace week3\gforti;
 
 class Util {
     

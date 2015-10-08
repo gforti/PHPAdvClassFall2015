@@ -10,7 +10,7 @@
         include './Scope.php';
         
         try {
-            $scope = new week2\gforti\Scope();
+            $scope = new week3\gforti\Scope();
         
             $scope->test = 'hello';
         

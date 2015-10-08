@@ -9,7 +9,7 @@
  * 
  * http://php.net/manual/en/language.oop5.cloning.php
  */
-namespace week2\gforti;
+namespace week3\gforti;
 use Exception;
 
 class Scope {
