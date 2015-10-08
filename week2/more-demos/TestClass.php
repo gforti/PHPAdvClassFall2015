@@ -22,7 +22,7 @@ class TestClass {
     /**
     * Function getTest.
     *    
-    * @returns void;
+    * @return void;
     */   
     public function getTest() {
         return $this->test;
