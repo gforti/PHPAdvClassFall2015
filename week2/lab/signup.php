@@ -10,12 +10,12 @@
        
             $util = new Util();
             $db = new DB($util->getDBConfig());
-            $login = new Login();
+            $signup = new Signup();
             
             $email= filter_input(INPUT_POST, 'email');
         ?>
         
-        <h1>Login Form</h1>
+        <h1>Signup Form</h1>
         
         <?php include './templates/login-form.html.php'; ?>
         
