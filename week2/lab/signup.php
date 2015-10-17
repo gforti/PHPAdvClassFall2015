@@ -8,13 +8,42 @@
     <body>
         <?php
        
+            $email= filter_input(INPUT_POST, 'email');
+            $password = filter_input(INPUT_POST, 'password');
+            
+            
             $util = new Util();
-            $db = new DB($util->getDBConfig());
+            $validtor = new Validator();
             $signup = new Signup();
             
-            $email= filter_input(INPUT_POST, 'email');
+            $errors = array();
+            
+            if ( $util->isPostRequest() ) {
+             
+                if ( !$validtor->emailIsValid($email) ) {
+                    $errors[] = 'Email is not valid';
+                }
+                
+                
+                if ( count($errors) <= 0) {
+                
+                    if ( $signup->save($email,$password) ) {
+                        $message = 'Signup complete';
+                    } else {
+                        $message = 'Signup failed';
+                    }
+                }
+                
+                
+            }
+            
+            
+            
+            
         ?>
         
+         <?php include './templates/errors.html.php'; ?>
+         <?php include './templates/messages.html.php'; ?>
         <h1>Signup Form</h1>
         
         <?php include './templates/login-form.html.php'; ?>
