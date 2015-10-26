@@ -12,7 +12,7 @@
         
         $directory = scandir('./uploads');
         
-        var_dump($directory);
+        //var_dump($directory);
         
         
         
@@ -21,7 +21,10 @@
         
         
         <?php foreach( $directory as $file) : ?>
-        
+            <?php if (!is_dir($file) ) : ?>
+        <h2><?php echo $file;?></h2>
+                <img src="./uploads/<?php echo $file;?>" />
+            <?php endif; ?>
         <?php endforeach; ?>
         
     </body>
