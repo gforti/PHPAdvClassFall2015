@@ -154,6 +154,10 @@ try {
             
         }
         
+    } else {
+        throw new InvalidArgumentException($resource . ' Resource Not Found');
+        //$response['errors'] = 'Resource Not Found';
+        //$status = 404;
     }
     
     
