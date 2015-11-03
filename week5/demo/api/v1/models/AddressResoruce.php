@@ -47,6 +47,7 @@ class AddressResoruce implements IRestModel {
     }
     
     public function post($serverData) {
+        /* note you should validate before adding to the data base */
         $stmt = $db->prepare("INSERT INTO address SET fullname = :fullname, email = :email, addressline1 = :addressline1, city = :city, state = :state, zip = :zip, birthday = :birthday");
         $binds = array(
             ":fullname" => $serverData['fullname'],
@@ -60,9 +61,8 @@ class AddressResoruce implements IRestModel {
 
         if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
             return true;
-        } else {
-            throw new Exception('Address could not be added');
-        }
+        } 
+        return false;
     }
     
 }
