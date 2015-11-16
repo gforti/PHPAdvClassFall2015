@@ -23,13 +23,11 @@ appControllers.controller('AddressCtrl', ['$scope', '$log', 'addressProvider',
 .controller('AddressDetailCtrl', ['$scope', '$log', '$routeParams', 'addressProvider',
     function($scope, $log, $routeParams, addressProvider) {
     
-       var addresses;
        var addressID = $routeParams.addressId;
         
-       function getAddresses() {    
-            addressProvider.getAllAddresses().success(function(response) {
-                addresses = response.data;
-                $scope.address = addresses[addressID];
+       function getAddress() {    
+            addressProvider.getAddresses(addressID).success(function(response) {
+                $scope.address = response.data;
                 $scope.address.birthday = new Date($scope.address.birthday);                
                 console.log($scope.address);
             }).error(function (response, status) {
@@ -37,7 +35,7 @@ appControllers.controller('AddressCtrl', ['$scope', '$log', 'addressProvider',
             });
         };
 
-        getAddresses();
+        getAddress();
         
         
     

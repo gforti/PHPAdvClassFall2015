@@ -11,6 +11,11 @@ appServices.factory('addressProvider', ['$http', 'config', function($http, confi
         "getAllAddresses": function () {
             return $http.get(url);
         },
+        "getAddresses": function (address_id) {
+            var _url = url + '/' + address_id;
+            console.log(_url);
+            return $http.get(_url);
+        },
         "postAddress": function (address_id, fullname, email, addressline1, city, state, zip, birthday) {
             model.fullname = fullname;
             model.email = email;
@@ -26,7 +31,7 @@ appServices.factory('addressProvider', ['$http', 'config', function($http, confi
             return $http.delete(_url);
         },
         "updateAddress" : function (address_id, fullname, email, addressline1, city, state, zip, birthday ) {  
-            var _url = url + address_id;
+            var _url = url + '/' + address_id;
             model.fullname = fullname;
             model.email = email;
             model.addressline1 = addressline1;
