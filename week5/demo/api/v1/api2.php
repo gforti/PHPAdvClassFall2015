@@ -38,7 +38,7 @@ try {
                 
             } else {
                 
-                $restServer->setData($resourceData->get(id));
+                $restServer->setData($resourceData->get($id));
                 
             }            
             
