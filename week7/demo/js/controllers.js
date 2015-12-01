@@ -51,7 +51,7 @@ appControllers.controller('AddressCtrl', ['$scope', '$log', 'addressProvider',
                     zoom: 10,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
-                var map = new google.maps.Map(document.querySelector('#googleMap'), mapProp);
+                var map = new google.maps.Map(document.querySelector('.googleMap'), mapProp);
                 var marker = new google.maps.Marker({
                     position: myCenter
                 });
